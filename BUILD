@@ -4,9 +4,6 @@ load("@aspect_rules_js//npm:defs.bzl", "npm_link_package")
 
 package(default_visibility = ["//visibility:public"])
 
-# This macro expands to a link_npm_package for each third-party package in package.json
-
-
 npm_link_package(
     name = "node_modules/@myorg-js/util",
     src = "//myorg/js/util:pkg",
@@ -14,18 +11,6 @@ npm_link_package(
 )
 
 npm_link_all_packages(name = "node_modules")
-
-exports_files([
-    "package.json",
-    "tsconfig.base.json",
-])
-
-exports_files(["docs"])
-
-copy_to_bin(
-    name = "tsconfig",
-    srcs = ["tsconfig.json"],
-)
 
 copy_to_bin(
     name = "tsconfig.base",
