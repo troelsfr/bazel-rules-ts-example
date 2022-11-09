@@ -1,0 +1,5 @@
+build --disk_cache=~/.cache/bazel/
+
+# Tries to import additional config
+try-import %workspace%/.bazelrc.configure
+try-import %workspace%/.bazelrc.user
