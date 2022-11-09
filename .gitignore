@@ -19,6 +19,5 @@ tsconfig.tsbuildinfo
 .idea/
 coverage
 devTestOnly/
-@zilliqa-js*
 bazel-*
 .husky
